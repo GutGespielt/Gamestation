@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Gaming Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background: #1f1f1f;
+            padding: 1em;
+            text-align: center;
+        }
+        nav {
+            background: #2c2c2c;
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            padding: 1em 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 2em;
+        }
+        .product {
+            background: #1e1e1e;
+            padding: 1em;
+            margin-bottom: 1em;
+            border-radius: 8px;
+        }
+        .price {
+            font-weight: bold;
+            color: #4caf50;
+        }
+        .rating {
+            color: gold;
+        }
+        .buy-button {
+            background: #4caf50;
+            color: white;
+            padding: 0.5em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 0.5em;
+        }
+        .buy-button:hover {
+            background: #45a049;
+        }
+        .visitor-counter {
+            margin-top: 1em;
+            font-size: 0.9em;
+            color: #bbb;
+        }
+        .agb {
+            font-size: 0.9em;
+            margin-top: 2em;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gaming Shop</h1>
+    </header>
+
+    <nav>
+        <a href="#playstation">Playstation Zubehör</a>
+        <a href="#xbox">XBox Zubehör</a>
+        <a href="#pc">PC & Laptop Zubehör</a>
+        <a href="#zimmer">Gamingzimmer</a>
+    </nav>
+
+    <section id="playstation">
+        <h2>Playstation Zubehör</h2>
+        <div class="product">
+            <img src="" alt="Produktbild" width="100%" />
+            <h3></h3>
+            <p class="price"></p>
+            <div class="rating">★★★★★</div>
+            <button class="buy-button" onclick="window.location='mailto:gutgespielt11@gmail.com?subject=Kaufanfrage%20Playstation%20Produkt';">Kaufen</button>
+        </div>
+    </section>
+
+    <section id="xbox">
+        <h2>XBox Zubehör</h2>
+        <div class="product">
+            <img src="" alt="Produktbild" width="100%" />
+            <h3></h3>
+            <p class="price"></p>
+            <div class="rating">★★★★☆</div>
+            <button class="buy-button" onclick="window.location='mailto:gutgespielt11@gmail.com?subject=Kaufanfrage%20Xbox%20Produkt';">Kaufen</button>
+        </div>
+    </section>
+
+    <section id="pc">
+        <h2>PC & Laptop Zubehör</h2>
+        <div class="product">
+            <img src="" alt="Produktbild" width="100%" />
+            <h3></h3>
+            <p class="price"></p>
+            <div class="rating">★★★☆☆</div>
+            <button class="buy-button" onclick="window.location='mailto:gutgespielt11@gmail.com?subject=Kaufanfrage%20PC%20Produkt';">Kaufen</button>
+        </div>
+    </section>
+
+    <section id="zimmer">
+        <h2>Gamingzimmer</h2>
+        <div class="product">
+            <img src="" alt="Produktbild" width="100%" />
+            <h3></h3>
+            <p class="price"></p>
+            <div class="rating">★★★★★</div>
+            <button class="buy-button" onclick="window.location='mailto:gutgespielt11@gmail.com?subject=Kaufanfrage%20Gamingzimmer%20Produkt';">Kaufen</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="agb">
+            <p>Alle Käufe sind verbindlich. Nur für Personen ab 18 Jahren. Dies ist ein Dropshipping-Shop. Lieferung kann 7–21 Tage dauern.</p>
+        </div>
+        <div class="visitor-counter">
+            Besucherzähler: <span id="visits">0</span>
+        </div>
+    </footer>
+
+    <script>
+        // Besucherzähler mit LocalStorage
+        let visits = localStorage.getItem('visits') || 0;
+        visits++;
+        localStorage.setItem('visits', visits);
+        document.getElementById('visits').innerText = visits;
+    </script>
+</body>
+</html>
